@@ -179,37 +179,6 @@ class HomePage extends StatelessWidget {
                           title: Text(product.title),
                           subtitle: Text(product.price),
                         )),
-                    const SizedBox(height: 24),
-                    ElevatedButton(
-                      onPressed: () => Navigator.pushNamed(context, '/about'),
-                      child: const Text('Go to About Page'),
-                    ),
-                    ElevatedButton(
-                      onPressed: () =>
-                          Navigator.pushNamed(context, '/collections'),
-                      child: const Text('Go to Collections Page'),
-                    ),
-                    ElevatedButton(
-                      onPressed: () =>
-                          Navigator.pushNamed(context, '/collection'),
-                      child: const Text('Go to Collection Page'),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => Navigator.pushNamed(context, '/product'),
-                      child: const Text('Go to Product Page'),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => Navigator.pushNamed(context, '/sale'),
-                      child: const Text('Go to Sale Page'),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => Navigator.pushNamed(context, '/cart'),
-                      child: const Text('Go to Cart Page'),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => Navigator.pushNamed(context, '/auth'),
-                      child: const Text('Go to Auth Page'),
-                    ),
                   ],
                 ),
               ),
