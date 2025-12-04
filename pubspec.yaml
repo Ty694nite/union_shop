@@ -19,7 +19,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
   assets:
-    - assets/images/magnet_1.JPEG
-    
+    - assets/images/
