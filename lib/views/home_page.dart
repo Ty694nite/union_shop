@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../view_models/home_view_model.dart';
+import '../models/product.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -157,19 +159,26 @@ class HomePage extends StatelessWidget {
               // Content Section (replace with page-specific content)
               Container(
                 color: Colors.white,
-                padding: const EdgeInsets.all(40.0),
-                child: const Column(
+                padding: const EdgeInsets.all(24.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'PAGE CONTENT SECTION',
+                    const Text(
+                      'Featured Products',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
                         letterSpacing: 1,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 48),
-                    // Add more widgets/content here
+                    const SizedBox(height: 24),
+                    ...HomeViewModel().getProducts().map((product) => ListTile(
+                          leading: Image.network(product.imageUrl,
+                              width: 50, height: 50, fit: BoxFit.cover),
+                          title: Text(product.title),
+                          subtitle: Text(product.price),
+                        )),
                   ],
                 ),
               ),
