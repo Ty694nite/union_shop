@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               // Header
               Container(
-                height: 100,
+                height: 200,
                 color: Colors.white,
                 child: Column(
                   children: [
