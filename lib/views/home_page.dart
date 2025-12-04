@@ -57,8 +57,8 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Row(
                           children: [
-                            Image.network(
-                              'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
+                            Image.asset(
+                              'assets/images/logo.avif',
                               height: 18,
                               fit: BoxFit.cover,
                               errorBuilder: (context, error, stackTrace) {
@@ -112,8 +112,8 @@ class HomePage extends StatelessWidget {
                       child: Container(
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage(
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityPostcard2_1024x1024@2x.jpg?v=1752232561',
+                            image: AssetImage(
+                              'images/postcard_1.JPEG',
                             ),
                             fit: BoxFit.cover,
                           ),
@@ -174,7 +174,7 @@ class HomePage extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
                     ...HomeViewModel().getProducts().map((product) => ListTile(
-                          leading: Image.network(product.imageUrl,
+                          leading: Image.asset(product.imageUrl,
                               width: 50, height: 50, fit: BoxFit.cover),
                           title: Text(product.title),
                           subtitle: Text(product.price),
