@@ -214,7 +214,7 @@ class HomeScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           const Text(
-                            'Placeholder Hero Title',
+                            'Welcome to the Union Shop!',
                             style: TextStyle(
                               fontSize: 32,
                               fontWeight: FontWeight.bold,
@@ -224,7 +224,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 16),
                           const Text(
-                            "This is placeholder text for the hero section.",
+                            "Shop Portsmouth Students' Union",
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,
