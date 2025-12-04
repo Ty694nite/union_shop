@@ -60,8 +60,8 @@ class HomeScreen extends StatelessWidget {
                       width: double.infinity,
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       color: const Color(0xFF4d2963),
-                      child: Column(
-                        children: const [
+                      child: const Column(
+                        children: [
                           Text(
                             'UNION SHOP',
                             textAlign: TextAlign.center,
