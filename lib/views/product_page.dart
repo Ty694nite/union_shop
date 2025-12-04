@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../view_models/product_view_model.dart';
+import '../models/product.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
@@ -13,6 +15,7 @@ class ProductPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Product product = ProductViewModel().getProductById('1');
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -179,9 +182,9 @@ class ProductPage extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // Product name
-                  const Text(
-                    'Placeholder Product Name',
-                    style: TextStyle(
+                  Text(
+                    product.title,
+                    style: const TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -191,9 +194,9 @@ class ProductPage extends StatelessWidget {
                   const SizedBox(height: 12),
 
                   // Product price
-                  const Text(
-                    '£15.00',
-                    style: TextStyle(
+                  Text(
+                    product.price,
+                    style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF4d2963),
@@ -219,6 +222,22 @@ class ProductPage extends StatelessWidget {
                       color: Colors.grey,
                       height: 1.5,
                     ),
+                  ),
+
+                  const SizedBox(height: 24),
+                  DropdownButton<String>(
+                    value: 'Size M',
+                    items: const [
+                      DropdownMenuItem(value: 'Size S', child: Text('Size S')),
+                      DropdownMenuItem(value: 'Size M', child: Text('Size M')),
+                      DropdownMenuItem(value: 'Size L', child: Text('Size L')),
+                    ],
+                    onChanged: (value) {},
+                  ),
+                  const SizedBox(height: 16),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Add to Cart'),
                   ),
                 ],
               ),
