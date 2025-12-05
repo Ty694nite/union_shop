@@ -435,5 +435,5 @@ From `pubspec.yaml`:
 
 - **Developer:** Taiyeb Ahmed
 - **Email:** up2274842@myport.ac.uk
-- **GitHub / Portfolio:** 
+- **GitHub / Portfolio:** [ty694nite](https://github.com/ty694nite)
 
