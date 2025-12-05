@@ -98,20 +98,14 @@ class HomePage extends StatelessWidget {
                               ),
                               // Add more menu items here if you want
                             ],
-                            child: TextButton(
-                              onPressed:
-                                  null, // disables direct tap, only shows menu
-                              style: TextButton.styleFrom(
-                                foregroundColor: Colors.black,
-                                textStyle: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight:
-                                      FontWeight.normal, // Match other buttons
-                                ),
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 8.0),
+                            child: const Text(
+                              'Shop',
+                              style: TextStyle(
+                                color: Color(0xFF4d2963),
+                                fontSize: 14,
+                                fontWeight:
+                                    FontWeight.normal, // Match other buttons
                               ),
-                              child: const Text('Shop'),
                             ),
                           ),
                           const Spacer(),
