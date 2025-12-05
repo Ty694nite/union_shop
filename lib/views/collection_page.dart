@@ -3,14 +3,16 @@ import '../view_models/home_view_model.dart';
 import '../models/product.dart';
 
 class CollectionPage extends StatelessWidget {
-  const CollectionPage({super.key});
+  final String collectionName;
+  const CollectionPage({super.key, required this.collectionName});
 
   @override
   Widget build(BuildContext context) {
-    final products = HomeViewModel().getProducts();
+    // You can filter products by collectionName if needed
+    final products = HomeViewModel().getProducts(); // Add filtering logic here
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Collection Example')),
+      appBar: AppBar(title: Text(collectionName)),
       body: Column(
         children: [
           // Dummy filter dropdown
