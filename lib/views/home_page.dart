@@ -392,13 +392,68 @@ class HomePage extends StatelessWidget {
                 width: double.infinity,
                 color: Colors.grey[50],
                 padding: const EdgeInsets.all(24),
-                child: const Text(
-                  'Placeholder Footer',
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Opening Hours',
+                      style: TextStyle(
+                        color: Color(0xFF4d2963),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Monday – Friday: 10:00 – 16:00\nSaturday – Sunday: Closed',
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 16,
+                      ),
+                    ),
+                    SizedBox(height: 16),
+                    Text(
+                      'Contact Us',
+                      style: TextStyle(
+                        color: Color(0xFF4d2963),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Email: unionshop@upsu.net\nPhone: 02392 843628',
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 16,
+                      ),
+                    ),
+                    SizedBox(height: 16),
+                    Text(
+                      'Location',
+                      style: TextStyle(
+                        color: Color(0xFF4d2963),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'The Union Shop, The Hub,\nPortsmouth Students\' Union,\nCambridge Road, Portsmouth, PO1 2EF',
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize: 16,
+                      ),
+                    ),
+                    SizedBox(height: 24),
+                    Text(
+                      '© 2025 Portsmouth Students\' Union. All rights reserved.',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
