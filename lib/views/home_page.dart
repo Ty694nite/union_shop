@@ -51,68 +51,51 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // Main header row (icons, logo, etc.)
-                    Expanded(
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: Row(
-                          children: [
-                            Image.network(
-                              'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
-                              height: 18,
-                              fit: BoxFit.cover,
-                              errorBuilder: (context, error, stackTrace) {
-                                return Container(
-                                  color: Colors.grey[300],
-                                  width: 18,
-                                  height: 18,
-                                  child: const Center(
-                                    child: Icon(Icons.image_not_supported,
-                                        color: Colors.grey),
-                                  ),
-                                );
-                              },
-                            ),
-                            TextButton(
-                              onPressed: () =>
-                                  Navigator.pushNamed(context, '/collections'),
-                              child: const Text('Collections'),
-                            ),
-                            TextButton(
-                              onPressed: () =>
-                                  Navigator.pushNamed(context, '/sale'),
-                              child: const Text('Sale'),
-                            ),
-                            TextButton(
-                              onPressed: () =>
-                                  Navigator.pushNamed(context, '/about'),
-                              child: const Text('About'),
-                            ),
-                            const Spacer(),
-                            IconButton(
-                              icon: const Icon(Icons.search,
-                                  size: 18, color: Colors.grey),
-                              onPressed: placeholderCallbackForButtons,
-                            ),
-                            IconButton(
-                              icon: const Icon(Icons.person_outline,
-                                  size: 18, color: Colors.grey),
-                              onPressed: () =>
-                                  Navigator.pushNamed(context, '/auth'),
-                            ),
-                            IconButton(
-                              icon: const Icon(Icons.shopping_bag_outlined,
-                                  size: 18, color: Colors.grey),
-                              onPressed: () =>
-                                  Navigator.pushNamed(context, '/cart'),
-                            ),
-                            IconButton(
-                              icon: const Icon(Icons.menu,
-                                  size: 18, color: Colors.grey),
-                              onPressed: placeholderCallbackForButtons,
-                            ),
-                          ],
-                        ),
+                    // Main header row (navbar)
+                    Container(
+                      color: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 8),
+                      child: Row(
+                        children: [
+                          // Logo
+                          Image.network(
+                            'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
+                            height: 28,
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) =>
+                                const Icon(Icons.image_not_supported),
+                          ),
+                          const SizedBox(width: 16),
+                          // Navbar links
+                          TextButton(
+                            onPressed: () => Navigator.pushNamed(context, '/'),
+                            child: const Text('Home'),
+                          ),
+                          TextButton(
+                            onPressed: () =>
+                                Navigator.pushNamed(context, '/sale'),
+                            child: const Text('Sale'),
+                          ),
+                          TextButton(
+                            onPressed: () =>
+                                Navigator.pushNamed(context, '/about'),
+                            child: const Text('About'),
+                          ),
+                          const Spacer(),
+                          IconButton(
+                            icon: const Icon(Icons.person_outline,
+                                color: Color(0xFF4d2963)),
+                            onPressed: () =>
+                                Navigator.pushNamed(context, '/auth'),
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.shopping_bag_outlined,
+                                color: Color(0xFF4d2963)),
+                            onPressed: () =>
+                                Navigator.pushNamed(context, '/cart'),
+                          ),
+                        ],
                       ),
                     ),
                   ],
