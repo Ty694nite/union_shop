@@ -240,12 +240,11 @@ class HomePage extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          SizedBox(
-                                            height:
-                                                220, // You can adjust this value as needed
-                                            width: double.infinity,
+                                          Expanded(
+                                            // <‑‑ CHANGED
                                             child: Image.asset(
                                               product.imageUrl,
+                                              width: double.infinity,
                                               fit: BoxFit.cover,
                                             ),
                                           ),
@@ -306,11 +305,11 @@ class HomePage extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          SizedBox(
-                                            height: 220,
-                                            width: double.infinity,
+                                          Expanded(
+                                            // <‑‑ CHANGED
                                             child: Image.asset(
                                               product.imageUrl,
+                                              width: double.infinity,
                                               fit: BoxFit.cover,
                                             ),
                                           ),
@@ -371,11 +370,11 @@ class HomePage extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          SizedBox(
-                                            height: 220,
-                                            width: double.infinity,
+                                          Expanded(
+                                            // <‑‑ CHANGED
                                             child: Image.asset(
                                               product.imageUrl,
+                                              width: double.infinity,
                                               fit: BoxFit.cover,
                                             ),
                                           ),
