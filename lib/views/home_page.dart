@@ -83,16 +83,8 @@ class HomePage extends StatelessWidget {
                             child: const Text('About'),
                           ),
                           PopupMenuButton<String>(
-                            child: const Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 8.0),
-                              child: Text(
-                                'Shop',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
+                            padding: EdgeInsets.zero,
+                            tooltip: 'Shop',
                             onSelected: (value) {
                               if (value == 'collections') {
                                 Navigator.pushNamed(context, '/collections');
@@ -104,7 +96,23 @@ class HomePage extends StatelessWidget {
                                 value: 'collections',
                                 child: Text('Collections'),
                               ),
+                              // Add more menu items here if you want
                             ],
+                            child: TextButton(
+                              onPressed:
+                                  null, // disables direct tap, only shows menu
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.black,
+                                textStyle: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight:
+                                      FontWeight.normal, // Match other buttons
+                                ),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 8.0),
+                              ),
+                              child: const Text('Shop'),
+                            ),
                           ),
                           const Spacer(),
                           IconButton(
