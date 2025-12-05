@@ -36,7 +36,7 @@ class SalePage extends StatelessWidget {
                         width: 50, height: 50, fit: BoxFit.cover),
                     title: Text(product.title),
                     subtitle: Text(
-                      'Was ${product.price}  Now £${(double.tryParse(product.price.replaceAll(RegExp(r'[^0-9.]'), '')) ?? 0 * 0.7).toStringAsFixed(2)}',
+                      'Was ${product.price}  Now £${((double.tryParse(product.price.replaceAll(RegExp(r'[^0-9.]'), '')) ?? 0) / 2).toStringAsFixed(2)}',
                       style: const TextStyle(color: Colors.green),
                     ),
                   );
