@@ -13,12 +13,12 @@ class AboutPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Union Shop',
+              'About Us',
               style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
             Text(
-              'The Union Shop is operated by Portsmouth Students\' Union. We offer official university merchandise, gifts, and accessories. All profits support student activities and services.',
+              'Welcome to the Union Shop! We are dedicated to giving you the very best University branded products, with a range of clothing and merchandise available to shop all year round! We even offer an exclusive personalisation service! ll online purchases are available for delivery or instore collection! We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please do not hesitate to contact us at hello@upsu.net. Happy shopping! The Union Shop & Reception Team​​​​​​​​​​',
               style: TextStyle(fontSize: 18),
             ),
             SizedBox(height: 24),
