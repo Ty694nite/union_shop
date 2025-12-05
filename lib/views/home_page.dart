@@ -73,6 +73,21 @@ class HomePage extends StatelessWidget {
                                 );
                               },
                             ),
+                            TextButton(
+                              onPressed: () =>
+                                  Navigator.pushNamed(context, '/collections'),
+                              child: const Text('Collections'),
+                            ),
+                            TextButton(
+                              onPressed: () =>
+                                  Navigator.pushNamed(context, '/sale'),
+                              child: const Text('Sale'),
+                            ),
+                            TextButton(
+                              onPressed: () =>
+                                  Navigator.pushNamed(context, '/about'),
+                              child: const Text('About'),
+                            ),
                             const Spacer(),
                             IconButton(
                               icon: const Icon(Icons.search,
@@ -82,12 +97,14 @@ class HomePage extends StatelessWidget {
                             IconButton(
                               icon: const Icon(Icons.person_outline,
                                   size: 18, color: Colors.grey),
-                              onPressed: placeholderCallbackForButtons,
+                              onPressed: () =>
+                                  Navigator.pushNamed(context, '/auth'),
                             ),
                             IconButton(
                               icon: const Icon(Icons.shopping_bag_outlined,
                                   size: 18, color: Colors.grey),
-                              onPressed: placeholderCallbackForButtons,
+                              onPressed: () =>
+                                  Navigator.pushNamed(context, '/cart'),
                             ),
                             IconButton(
                               icon: const Icon(Icons.menu,
@@ -164,7 +181,7 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Featured Products',
+                      'Essential range',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
