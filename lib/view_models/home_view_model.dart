@@ -25,9 +25,27 @@ class HomeViewModel {
           imageUrl: 'images/signature_hoodie.WEBP'),
       Product(
           id: '4',
-          title: 'Signature T_Shirt',
+          title: 'Signature T-Shirt',
           price: '£9.99',
           imageUrl: 'images/signature_t_shirt.WEBP'),
+    ];
+  }
+
+  List<Product> getCityCollectionProducts() {
+    return [
+      Product(
+        id: '5',
+        title: 'Portsmouth Magnet',
+        price: '£15.99',
+        imageUrl: 'images/magnet_1.JPEG',
+      ),
+      Product(
+        id: '6',
+        title: 'Portsmouth Postcard',
+        price: '£7.99',
+        imageUrl: 'images/postcard_1.JPEG',
+      ),
+      // Add more city collection products as needed
     ];
   }
 }
