@@ -206,11 +206,13 @@ class HomePage extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
-                                      Expanded(
+                                      SizedBox(
+                                        height:
+                                            120, // You can adjust this value as needed
+                                        width: double.infinity,
                                         child: Image.asset(
                                           product.imageUrl,
                                           fit: BoxFit.cover,
-                                          width: double.infinity,
                                         ),
                                       ),
                                       Padding(
