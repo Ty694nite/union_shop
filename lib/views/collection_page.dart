@@ -35,7 +35,7 @@ class CollectionPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 final Product product = products[index];
                 return ListTile(
-                  leading: Image.network(product.imageUrl,
+                  leading: Image.asset(product.imageUrl,
                       width: 50, height: 50, fit: BoxFit.cover),
                   title: Text(product.title),
                   subtitle: Text(product.price),
