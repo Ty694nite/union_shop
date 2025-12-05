@@ -208,7 +208,7 @@ class HomePage extends StatelessWidget {
                                     children: [
                                       SizedBox(
                                         height:
-                                            120, // You can adjust this value as needed
+                                            220, // You can adjust this value as needed
                                         width: double.infinity,
                                         child: Image.asset(
                                           product.imageUrl,
