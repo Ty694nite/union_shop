@@ -128,74 +128,97 @@ class HomePage extends StatelessWidget {
                                     const Icon(Icons.image_not_supported),
                               ),
                               const SizedBox(width: 16),
-                              // Navbar links
-                              TextButton(
-                                onPressed: () =>
-                                    Navigator.pushNamed(context, '/'),
-                                child: const Text('Home'),
-                              ),
-                              TextButton(
-                                onPressed: () =>
-                                    Navigator.pushNamed(context, '/sale'),
-                                child: const Text('Sale'),
-                              ),
-                              TextButton(
-                                onPressed: () =>
-                                    Navigator.pushNamed(context, '/about'),
-                                child: const Text('About'),
-                              ),
-                              PopupMenuButton<String>(
-                                padding: EdgeInsets.zero,
-                                tooltip: 'Shop',
-                                onSelected: (value) {
-                                  if (value == 'collections') {
-                                    Navigator.pushNamed(
-                                        context, '/collections');
-                                  }
-                                  // Add more options here if needed
-                                },
-                                itemBuilder: (context) => [
-                                  const PopupMenuItem(
-                                    value: 'collections',
-                                    child: Text('Collections'),
-                                  ),
-                                  // Add more menu items here if you want
-                                ],
-                                child: const Text(
-                                  'Shop',
-                                  style: TextStyle(
-                                    color: Color(0xFF4d2963),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight
-                                        .normal, // Match other buttons
+
+                              if (screenWidth >= 700) ...[
+                                // FULL NAVBAR (desktop / tablet)
+                                TextButton(
+                                  onPressed: () =>
+                                      Navigator.pushNamed(context, '/'),
+                                  child: const Text('Home'),
+                                ),
+                                TextButton(
+                                  onPressed: () =>
+                                      Navigator.pushNamed(context, '/sale'),
+                                  child: const Text('Sale'),
+                                ),
+                                TextButton(
+                                  onPressed: () =>
+                                      Navigator.pushNamed(context, '/about'),
+                                  child: const Text('About'),
+                                ),
+                                PopupMenuButton<String>(
+                                  padding: EdgeInsets.zero,
+                                  tooltip: 'Shop',
+                                  onSelected: (value) {
+                                    if (value == 'collections') {
+                                      Navigator.pushNamed(
+                                          context, '/collections');
+                                    }
+                                  },
+                                  itemBuilder: (context) => const [
+                                    PopupMenuItem(
+                                      value: 'collections',
+                                      child: Text('Collections'),
+                                    ),
+                                  ],
+                                  child: const Text(
+                                    'Shop',
+                                    style: TextStyle(
+                                      color: Color(0xFF4d2963),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              const TextButton(
-                                onPressed:
-                                    null, // Static button, does nothing for now
-                                child: Text(
-                                  'The Print Shack',
-                                  style: TextStyle(
-                                    color: Color(0xFF4d2963),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
+                                const TextButton(
+                                  onPressed:
+                                      null, // Static button, does nothing for now
+                                  child: Text(
+                                    'The Print Shack',
+                                    style: TextStyle(
+                                      color: Color(0xFF4d2963),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              const Spacer(),
-                              IconButton(
-                                icon: const Icon(Icons.person_outline,
-                                    color: Color(0xFF4d2963)),
-                                onPressed: () =>
-                                    Navigator.pushNamed(context, '/auth'),
-                              ),
-                              IconButton(
-                                icon: const Icon(Icons.shopping_bag_outlined,
-                                    color: Color(0xFF4d2963)),
-                                onPressed: () =>
-                                    Navigator.pushNamed(context, '/cart'),
-                              ),
+                                const Spacer(),
+                                IconButton(
+                                  icon: const Icon(Icons.person_outline,
+                                      color: Color(0xFF4d2963)),
+                                  onPressed: () =>
+                                      Navigator.pushNamed(context, '/auth'),
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.shopping_bag_outlined,
+                                      color: Color(0xFF4d2963)),
+                                  onPressed: () =>
+                                      Navigator.pushNamed(context, '/cart'),
+                                ),
+                              ] else ...[
+                                // COMPACT NAVBAR (mobile)
+                                const Spacer(),
+                                IconButton(
+                                  icon: const Icon(Icons.person_outline,
+                                      color: Color(0xFF4d2963)),
+                                  onPressed: () =>
+                                      Navigator.pushNamed(context, '/auth'),
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.shopping_bag_outlined,
+                                      color: Color(0xFF4d2963)),
+                                  onPressed: () =>
+                                      Navigator.pushNamed(context, '/cart'),
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.menu,
+                                      color: Color(0xFF4d2963)),
+                                  onPressed: () {
+                                    // open the drawer
+                                    Scaffold.of(context).openDrawer();
+                                  },
+                                ),
+                              ],
                             ],
                           ),
                         ),
@@ -220,7 +243,7 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             child: Container(
-                              color: Colors.black.withValues(alpha: 0.7),
+                              color: Colors.black.withOpacity(0.7),
                             ),
                           ),
                         ),
