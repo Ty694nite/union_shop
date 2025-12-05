@@ -302,6 +302,70 @@ class HomePage extends StatelessWidget {
                 ),
               ),
 
+              // Portsmouth City Collection section
+              Container(
+                color: Colors.white,
+                padding: const EdgeInsets.all(24.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Portsmouth City Collection',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+                    SizedBox(
+                      height: 300,
+                      child: GridView.count(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 12,
+                        mainAxisSpacing: 12,
+                        childAspectRatio: 3 / 4,
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: HomeViewModel()
+                            .getCityCollectionProducts()
+                            .map((product) => Card(
+                                  elevation: 2,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(
+                                        height: 220,
+                                        width: double.infinity,
+                                        child: Image.asset(
+                                          product.imageUrl,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(product.title,
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 8.0),
+                                        child: Text(product.price,
+                                            style: const TextStyle(
+                                                color: Colors.green)),
+                                      ),
+                                    ],
+                                  ),
+                                ))
+                            .toList(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
               // Footer
               Container(
                 width: double.infinity,
