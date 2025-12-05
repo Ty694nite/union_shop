@@ -57,8 +57,8 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Row(
                           children: [
-                            Image.asset(
-                              'assets/images/logo.avif',
+                            Image.network(
+                              'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
                               height: 18,
                               fit: BoxFit.cover,
                               errorBuilder: (context, error, stackTrace) {
