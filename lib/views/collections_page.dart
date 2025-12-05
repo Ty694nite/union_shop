@@ -11,17 +11,45 @@ class CollectionsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Collections')),
-      body: ListView.builder(
-        itemCount: collections.length,
-        itemBuilder: (context, index) {
-          final Collection collection = collections[index];
-          return ListTile(
-            title: Text(collection.name),
-            onTap: () {
-              // You can add navigation to the collection page here later
-            },
-          );
-        },
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: GridView.builder(
+          itemCount: collections.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 16,
+            mainAxisSpacing: 16,
+            childAspectRatio: 3 / 4,
+          ),
+          itemBuilder: (context, index) {
+            final collection = collections[index];
+            return Card(
+              elevation: 2,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(
+                    child: Image.asset(
+                      collection.imageUrl,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      collection.name,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }
