@@ -108,6 +108,18 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          const TextButton(
+                            onPressed:
+                                null, // Static button, does nothing for now
+                            child: Text(
+                              'The Print Shack',
+                              style: TextStyle(
+                                color: Color(0xFF4d2963),
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            ),
+                          ),
                           const Spacer(),
                           IconButton(
                             icon: const Icon(Icons.person_outline,
