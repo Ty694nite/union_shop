@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../view_models/home_view_model.dart';
-import '../models/product.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -243,7 +242,7 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                             child: Container(
-                              color: Colors.black.withOpacity(0.7),
+                              color: Colors.black.withValues(alpha: 0.7),
                             ),
                           ),
                         ),

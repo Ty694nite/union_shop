@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../view_models/collections_view_model.dart';
-import '../models/collection.dart';
 import 'collection_page.dart';
 
 class CollectionsPage extends StatelessWidget {
