@@ -103,9 +103,8 @@ class HomePage extends StatelessWidget {
                               const PopupMenuItem(
                                 value: 'collections',
                                 child: Text('Collections'),
-                              ),                            
+                              ),
                             ],
-                            
                           ),
                           const Spacer(),
                           IconButton(
