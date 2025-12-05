@@ -5,14 +5,14 @@ class HomeViewModel {
     return [
       Product(
           id: '1',
-          title: 'Product 1',
-          price: '£10.00',
-          imageUrl: 'images/magnet_1.JPEG'),
+          title: 'Essential Zip Hoodie',
+          price: '£14.99',
+          imageUrl: 'images/pink_essential_hoodie.WEBP'),
       Product(
           id: '2',
-          title: 'Product 2',
-          price: '£15.00',
-          imageUrl: 'images/postcard_1.JPEG'),
+          title: 'Essential T Shirt',
+          price: '£6.99',
+          imageUrl: 'images/green_t_shirt.WEBP'),
     ];
   }
 }
