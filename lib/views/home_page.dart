@@ -190,12 +190,48 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 24),
-                    ...HomeViewModel().getProducts().map((product) => ListTile(
-                          leading: Image.asset(product.imageUrl,
-                              width: 50, height: 50, fit: BoxFit.cover),
-                          title: Text(product.title),
-                          subtitle: Text(product.price),
-                        )),
+                    SizedBox(
+                      height: 300, // Adjust height as needed
+                      child: GridView.count(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 12,
+                        mainAxisSpacing: 12,
+                        childAspectRatio: 3 / 4,
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: HomeViewModel()
+                            .getProducts()
+                            .map((product) => Card(
+                                  elevation: 2,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: Image.asset(
+                                          product.imageUrl,
+                                          fit: BoxFit.cover,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(product.title,
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.bold)),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 8.0),
+                                        child: Text(product.price,
+                                            style: const TextStyle(
+                                                color: Colors.green)),
+                                      ),
+                                    ],
+                                  ),
+                                ))
+                            .toList(),
+                      ),
+                    ),
                   ],
                 ),
               ),
