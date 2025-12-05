@@ -307,35 +307,42 @@ class HomePage extends StatelessWidget {
                             shrinkWrap: true,
                             children: HomeViewModel()
                                 .getProducts()
-                                .map((product) => Card(
-                                      elevation: 2,
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Expanded(
-                                            // <‑‑ CHANGED
-                                            child: Image.asset(
-                                              product.imageUrl,
-                                              width: double.infinity,
-                                              fit: BoxFit.cover,
+                                .map((product) => InkWell(
+                                      onTap: () {
+                                        Navigator.pushNamed(
+                                            context, '/product');
+                                      },
+                                      child: Card(
+                                        elevation: 2,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Expanded(
+                                              child: Image.asset(
+                                                product.imageUrl,
+                                                width: double.infinity,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text(product.title,
-                                                style: const TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 8.0),
-                                            child: Text(product.price,
-                                                style: const TextStyle(
-                                                    color: Colors.green)),
-                                          ),
-                                        ],
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(product.title,
+                                                  style: const TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold)),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 8.0),
+                                              child: Text(product.price,
+                                                  style: const TextStyle(
+                                                      color: Colors.green)),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ))
                                 .toList(),
@@ -372,35 +379,42 @@ class HomePage extends StatelessWidget {
                             shrinkWrap: true,
                             children: HomeViewModel()
                                 .getSignatureProducts()
-                                .map((product) => Card(
-                                      elevation: 2,
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Expanded(
-                                            // <‑‑ CHANGED
-                                            child: Image.asset(
-                                              product.imageUrl,
-                                              width: double.infinity,
-                                              fit: BoxFit.cover,
+                                .map((product) => InkWell(
+                                      onTap: () {
+                                        Navigator.pushNamed(
+                                            context, '/product');
+                                      },
+                                      child: Card(
+                                        elevation: 2,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Expanded(
+                                              child: Image.asset(
+                                                product.imageUrl,
+                                                width: double.infinity,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text(product.title,
-                                                style: const TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 8.0),
-                                            child: Text(product.price,
-                                                style: const TextStyle(
-                                                    color: Colors.green)),
-                                          ),
-                                        ],
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(product.title,
+                                                  style: const TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold)),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 8.0),
+                                              child: Text(product.price,
+                                                  style: const TextStyle(
+                                                      color: Colors.green)),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ))
                                 .toList(),
@@ -437,35 +451,42 @@ class HomePage extends StatelessWidget {
                             shrinkWrap: true,
                             children: HomeViewModel()
                                 .getCityCollectionProducts()
-                                .map((product) => Card(
-                                      elevation: 2,
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Expanded(
-                                            // <‑‑ CHANGED
-                                            child: Image.asset(
-                                              product.imageUrl,
-                                              width: double.infinity,
-                                              fit: BoxFit.cover,
+                                .map((product) => InkWell(
+                                      onTap: () {
+                                        Navigator.pushNamed(
+                                            context, '/product');
+                                      },
+                                      child: Card(
+                                        elevation: 2,
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Expanded(
+                                              child: Image.asset(
+                                                product.imageUrl,
+                                                width: double.infinity,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text(product.title,
-                                                style: const TextStyle(
-                                                    fontWeight:
-                                                        FontWeight.bold)),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                horizontal: 8.0),
-                                            child: Text(product.price,
-                                                style: const TextStyle(
-                                                    color: Colors.green)),
-                                          ),
-                                        ],
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(product.title,
+                                                  style: const TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold)),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 8.0),
+                                              child: Text(product.price,
+                                                  style: const TextStyle(
+                                                      color: Colors.green)),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ))
                                 .toList(),
