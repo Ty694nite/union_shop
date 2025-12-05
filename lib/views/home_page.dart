@@ -15,7 +15,57 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
+
     return Scaffold(
+      key: scaffoldKey,
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color(0xFF4d2963),
+              ),
+              child: Text(
+                'Union Shop',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              title: const Text('Home'),
+              onTap: () => Navigator.pushNamed(context, '/'),
+            ),
+            ListTile(
+              title: const Text('Sale'),
+              onTap: () => Navigator.pushNamed(context, '/sale'),
+            ),
+            ListTile(
+              title: const Text('About'),
+              onTap: () => Navigator.pushNamed(context, '/about'),
+            ),
+            ListTile(
+              title: const Text('Collections'),
+              onTap: () => Navigator.pushNamed(context, '/collections'),
+            ),
+            const ListTile(
+              title: Text('The Print Shack'),
+              // static for now
+            ),
+            ListTile(
+              title: const Text('Account'),
+              onTap: () => Navigator.pushNamed(context, '/auth'),
+            ),
+            ListTile(
+              title: const Text('Cart'),
+              onTap: () => Navigator.pushNamed(context, '/cart'),
+            ),
+          ],
+        ),
+      ),
       body: LayoutBuilder(
         builder: (context, constraints) {
           final screenWidth = constraints.maxWidth;
