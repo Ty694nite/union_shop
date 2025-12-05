@@ -225,13 +225,13 @@ class HomePage extends StatelessWidget {
                         ),
                         const SizedBox(height: 24),
                         SizedBox(
-                          height: 300, // Adjust height as needed
                           child: GridView.count(
                             crossAxisCount: crossAxisCount,
                             crossAxisSpacing: 12,
                             mainAxisSpacing: 12,
                             childAspectRatio: 3 / 4,
                             physics: const NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
                             children: HomeViewModel()
                                 .getProducts()
                                 .map((product) => Card(
@@ -291,13 +291,13 @@ class HomePage extends StatelessWidget {
                         ),
                         const SizedBox(height: 24),
                         SizedBox(
-                          height: 300,
                           child: GridView.count(
                             crossAxisCount: crossAxisCount,
                             crossAxisSpacing: 12,
                             mainAxisSpacing: 12,
                             childAspectRatio: 3 / 4,
                             physics: const NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
                             children: HomeViewModel()
                                 .getSignatureProducts()
                                 .map((product) => Card(
@@ -356,13 +356,13 @@ class HomePage extends StatelessWidget {
                         ),
                         const SizedBox(height: 24),
                         SizedBox(
-                          height: 300,
                           child: GridView.count(
                             crossAxisCount: crossAxisCount,
                             crossAxisSpacing: 12,
                             mainAxisSpacing: 12,
                             childAspectRatio: 3 / 4,
                             physics: const NeverScrollableScrollPhysics(),
+                            shrinkWrap: true,
                             children: HomeViewModel()
                                 .getCityCollectionProducts()
                                 .map((product) => Card(
