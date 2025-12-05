@@ -82,6 +82,31 @@ class HomePage extends StatelessWidget {
                                 Navigator.pushNamed(context, '/about'),
                             child: const Text('About'),
                           ),
+                          PopupMenuButton<String>(
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Text(
+                                'Shop',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                            onSelected: (value) {
+                              if (value == 'collections') {
+                                Navigator.pushNamed(context, '/collections');
+                              }
+                              // Add more options here if needed
+                            },
+                            itemBuilder: (context) => [
+                              const PopupMenuItem(
+                                value: 'collections',
+                                child: Text('Collections'),
+                              ),                            
+                            ],
+                            
+                          ),
                           const Spacer(),
                           IconButton(
                             icon: const Icon(Icons.person_outline,
